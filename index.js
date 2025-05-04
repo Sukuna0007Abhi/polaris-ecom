@@ -5,7 +5,9 @@ const productRouter = require("./routes/product.router")
 const userRouter = require("./routes/user.router")
 const orderRouter = require("./routes/order.router")
 const mongoose = require("./db/connection")
+const cors = require('cors');
 const app= express();
+app.use(cors());
 app.use(bodyParser.json());
 
 app.use("/product",productRouter)
